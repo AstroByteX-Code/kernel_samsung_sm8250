@@ -78,6 +78,7 @@ endif
 
 ifeq ($(CONFIG_LD_IS_LLD), y)
 KBUILD_LDFLAGS	+= -z norelro
+LDFLAGS_vmlinux	+= --icf=safe
 endif
 
 CHECKFLAGS	+= -D__aarch64__
